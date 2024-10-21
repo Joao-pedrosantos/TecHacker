@@ -1,19 +1,48 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 10px;
-  }
-  
-  h1 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    margin: 5px 0;
-  }
-  
-  h2 {
-    margin-top: 15px;
-    color: #ff0000;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 10px;
+}
+
+h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 5px 0;
+}
+
+h2 {
+  margin-top: 15px;
+  color: #ff0000;
+}
+
+/* Add styles for links */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Styles for the item lists */
+.item-list {
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.item-list.hidden {
+  display: none;
+}
+
+.item-list ul {
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.item-list li {
+  margin: 3px 0;
+}

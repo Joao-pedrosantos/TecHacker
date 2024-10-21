@@ -5,7 +5,7 @@ let thirdPartyDomains = {};
 browser.webRequest.onCompleted.addListener(
   (details) => {
     let tabId = details.tabId;
-    if (tabId === -1) return; // Ignore requests not associated with a tab
+    if (tabId === -1) return; 
 
     let url = new URL(details.url);
     let domain = url.hostname;
@@ -25,14 +25,12 @@ browser.webRequest.onCompleted.addListener(
           thirdPartyDomains[tabId] = new Set();
         }
         thirdPartyDomains[tabId].add(domain);
-
-        // Debug log for third-party domain detection
         console.log(`Third-party domain detected on tab ${tabId}: ${domain}`);
       }
     }).catch((error) => {
       console.error(`Error getting tab information: ${error}`);
     });
-  },
+  },// Ignore requests not associated with a tab
   { urls: ["<all_urls>"] }
 );
 
